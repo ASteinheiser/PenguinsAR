@@ -10,7 +10,7 @@ import {
   Viro360Image,
 } from 'react-viro';
 
-export default class HelloWorldScene extends Component {
+export default class HelloWorldSceneVR extends Component {
 
   constructor() {
     super();
@@ -39,4 +39,4 @@ var styles = StyleSheet.create({
   },
 });
 
-module.exports = HelloWorldScene;
+module.exports = HelloWorldSceneVR;

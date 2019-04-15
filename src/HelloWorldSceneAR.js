@@ -27,7 +27,11 @@ export default class HelloWorldSceneAR extends Component {
   render() {
     return (
       <ViroARScene onTrackingUpdated={this._onInitialized} >
-        <ViroText text={this.state.text} scale={[.5, .5, .5]} position={[0, 0, -1]} style={styles.helloWorldTextStyle} />
+        <ViroText
+          text={this.state.text}
+          scale={[.5, .5, .5]}
+          position={[0, 0, -1]}
+          style={styles.helloWorldTextStyle} />
       </ViroARScene>
     );
   }
@@ -35,11 +39,11 @@ export default class HelloWorldSceneAR extends Component {
   _onInitialized(state, reason) {
     if (state == ViroConstants.TRACKING_NORMAL) {
       this.setState({
-        text : "Hello AR Text :)"
+        text : 'Hello AR Text :)'
       });
     } else if (state == ViroConstants.TRACKING_NONE) {
       this.setState({
-        text : ""
+        text : ''
       });
     }
   }
