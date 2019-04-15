@@ -1,9 +1,5 @@
-'use strict';
-
 import React, { Component } from 'react';
-
-import {StyleSheet} from 'react-native';
-
+import { StyleSheet } from 'react-native';
 import {
   ViroScene,
   ViroText,
@@ -11,26 +7,23 @@ import {
 } from 'react-viro';
 
 export default class HelloWorldSceneVR extends Component {
-
-  constructor() {
-    super();
-
-    this.state = {} // Set initial state here
-  }
-
   render() {
     return (
       <ViroScene>
         <Viro360Image source={require('./assets/guadalupe_360.jpg')} />
-        <ViroText text="Hello World!" width={2} height={2} position={[0, 0, -2]} style={styles.helloWorldTextStyle} />
+        <ViroText
+          text="Welcome to Guadalupe!"
+          width={2}
+          height={2}
+          position={[0, 0, -2]}
+          style={styles.textStyle} />
       </ViroScene>
     );
   }
-
 }
 
 var styles = StyleSheet.create({
-  helloWorldTextStyle: {
+  textStyle: {
     fontFamily: 'Arial',
     fontSize: 60,
     color: '#ffffff',
@@ -38,5 +31,3 @@ var styles = StyleSheet.create({
     textAlign: 'center',  
   },
 });
-
-module.exports = HelloWorldSceneVR;

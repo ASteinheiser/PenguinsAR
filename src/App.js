@@ -1,12 +1,3 @@
-/**
- * Copyright (c) 2017-present, Viro, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
-
 import React, { Component } from 'react';
 import {
   Text,
@@ -14,19 +5,16 @@ import {
   StyleSheet,
   TouchableHighlight,
 } from 'react-native';
-
 import {
   ViroVRSceneNavigator,
   ViroARSceneNavigator
 } from 'react-viro';
+import InitialARScene from './HelloWorldSceneAR';
+import InitialVRScene from './HelloWorldSceneVR';
 
 var sharedProps = {
   apiKey: 'D6EF1F59-F0F4-4E13-B48E-FB5C578E2CEB',
-}
-
-// Sets the default scene you want for AR and VR
-var InitialARScene = require('./HelloWorldSceneAR');
-var InitialVRScene = require('./HelloWorldSceneVR');
+};
 
 var UNSET = "UNSET";
 var VR_NAVIGATOR_TYPE = "VR";
@@ -179,5 +167,3 @@ var localStyles = StyleSheet.create({
     borderColor: '#fff',
   }
 });
-
-module.exports = App;
