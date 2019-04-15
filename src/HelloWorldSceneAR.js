@@ -35,10 +35,12 @@ export default class HelloWorldSceneAR extends Component {
   _onInitialized(state, reason) {
     if (state == ViroConstants.TRACKING_NORMAL) {
       this.setState({
-        text : "Danielle Is A Butt!"
+        text : "Hello AR Text :)"
       });
     } else if (state == ViroConstants.TRACKING_NONE) {
-      // Handle loss of tracking
+      this.setState({
+        text : ""
+      });
     }
   }
 }
