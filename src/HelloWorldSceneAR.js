@@ -18,7 +18,7 @@ export default class HelloWorldSceneAR extends Component {
 
   render() {
     return (
-      <ViroARScene onTrackingInitialized={() => this.setState({text : 'Hello World Objects!'})}>
+      <ViroARScene onTrackingUpdated={() => this.setState({text: 'Penguins!'})}>
         <ViroText
           text={this.state.text}
           scale={[.1, .1, .1]}
@@ -27,7 +27,7 @@ export default class HelloWorldSceneAR extends Component {
           position={[0, .5, -1]}
           style={styles.helloWorldTextStyle} />
 
-        <ViroAmbientLight color={"#aaaaaa"} />
+        <ViroAmbientLight color={"#eeeeee"} />
         <ViroSpotLight
           innerAngle={5}
           outerAngle={90}
@@ -37,11 +37,13 @@ export default class HelloWorldSceneAR extends Component {
           castsShadow={true} />
 
         <Viro3DObject
-          source={require('./assets/emoji_smile.vrx')}
+          source={require('./assets/linux-penguin/Linux_Penguin.obj')}
           position={[0, 0, -1]}
-          scale={[.2, .2, .2]}
-          type="VRX"
-          dragType="FixedDistance" onDrag={()=>{}}
+          scale={[.02, .02, .02]}
+          type='OBJ'
+          dragType='FixedToWorld'
+          onDrag={()=>{}}
+          onError={console.log}
         />
 
       </ViroARScene>
