@@ -8,7 +8,7 @@ import {
   ViroSpotLight,
 } from 'react-viro';
 
-export default class HelloWorldSceneAR extends Component {
+export default class PenguinSceneAR extends Component {
   constructor() {
     super();
     this.state = {
@@ -25,7 +25,7 @@ export default class HelloWorldSceneAR extends Component {
           height={1}
           width={4}
           position={[0, .5, -1]}
-          style={styles.helloWorldTextStyle} />
+          style={styles.textStyle} />
 
         <ViroAmbientLight color={"#eeeeee"} />
         <ViroSpotLight
@@ -37,7 +37,7 @@ export default class HelloWorldSceneAR extends Component {
           castsShadow={true} />
 
         <Viro3DObject
-          source={require('./assets/linux-penguin/Linux_Penguin.obj')}
+          source={require('../assets/linux-penguin/Linux_Penguin.obj')}
           position={[0, 0, -1]}
           scale={[.02, .02, .02]}
           type='OBJ'
@@ -52,7 +52,7 @@ export default class HelloWorldSceneAR extends Component {
 };
 
 var styles = StyleSheet.create({
-  helloWorldTextStyle: {
+  textStyle: {
     fontFamily: 'Arial',
     fontSize: 50,
     color: '#ffffff',
