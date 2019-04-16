@@ -37,6 +37,16 @@ export default class PenguinSceneAR extends Component {
           castsShadow={true} />
 
         <Viro3DObject
+          source={require('../assets/pixel-penguin/SM_Penguin_Emperor.obj')}
+          position={[0, 0, -1.5]}
+          scale={[.25, .25, .25]}
+          type='OBJ'
+          dragType='FixedToWorld'
+          onDrag={()=>{}}
+          onError={console.log}
+        />
+
+        <Viro3DObject
           source={require('../assets/linux-penguin/Linux_Penguin.obj')}
           position={[0, 0, -1]}
           scale={[.02, .02, .02]}
