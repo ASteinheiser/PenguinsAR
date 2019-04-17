@@ -3,8 +3,9 @@ import {
   ViroARScene,
   Viro3DObject,
   ViroAmbientLight,
-  ViroSpotLight,
+  ViroSpotLight
 } from 'react-viro';
+import IslandPortal from '../components/IslandPortal';
 
 export default class PenguinSceneAR extends Component {
   constructor() {
@@ -47,9 +48,12 @@ export default class PenguinSceneAR extends Component {
   render() {
     const { linuxPenguin, pixelPenguin } = this.state;
     return (
-      <ViroARScene onTrackingUpdated={() => this.setState({text: 'Penguins!'})}>
+      <ViroARScene
+        onTrackingUpdated={() => this.setState({text: 'Penguins!'})}>
 
-        <ViroAmbientLight color={'#eeeeee'} />
+        <IslandPortal />
+
+        <ViroAmbientLight color={'#eeeeee'} intensity={200} />
 
         <ViroSpotLight
           innerAngle={5}
