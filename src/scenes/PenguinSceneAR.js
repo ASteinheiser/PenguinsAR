@@ -38,7 +38,7 @@ export default class PenguinSceneAR extends Component {
 
         <Viro3DObject
           source={require('../assets/pixel-penguin/SM_Penguin_Emperor.obj')}
-          position={[0, 0, -1.5]}
+          position={[0, 0, -1]}
           scale={[.15, .15, .15]}
           type='OBJ'
           dragType='FixedToWorld'
